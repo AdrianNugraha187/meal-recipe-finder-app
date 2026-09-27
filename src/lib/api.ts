@@ -1,6 +1,6 @@
 import { MealResponse } from "../types";
 
-const BASE_URL = "https://themealdb.com/api/json/v1/1";
+const BASE_URL = process.env.MEAL_API_BASE_URL;
 
 async function fetcher<T>(endpoint: string): Promise<T> {
   const res = await fetch(`${BASE_URL}${endpoint}`);
